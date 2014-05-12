@@ -1,0 +1,12 @@
+ {{view Ember.TextField valueBinding="newEntryName" action="addEntry"}}
+ <ul>
+    {{#each controller}}
+    <li>
+    {{name}}
+       {{#if winner}}
+         <span {{bind-attr class="winner highlight"}}>WINNER</span>
+       {{/if}}
+    </li>
+    {{/each}}
+ </ul>
+ <button id="dw" {{action drawWinner}}>Draw Winner</button>
